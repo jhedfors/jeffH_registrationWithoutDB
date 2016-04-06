@@ -33,7 +33,7 @@
       <?php
           if(isset($_SESSION['errors'])) {
             foreach ($_SESSION['errors']  as $error ) {
-              echo $error;
+              echo "<p>".$error."</p>";
             }
           }
        ?>
