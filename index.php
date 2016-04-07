@@ -1,4 +1,5 @@
 <?php session_start();
+// session_destroy();
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,11 +32,22 @@
       </form>
 
       <?php
-          if(isset($_SESSION['errors'])) {
-            foreach ($_SESSION['errors']  as $error ) {
-              echo "<p>".$error."</p>";
-            }
+          if(isset($_SESSION['errors']['email'])) {
+            echo  $_SESSION['errors']['email'];
           }
+
+
+          // $emailerror = $_SESSION['errors']['email'];
+          // echo $_SESSION['errors'];
+          // echo $emailerror;
+          var_dump ($_SESSION['errors']);
+
+
+
+          // if(isset($_SESSION['errors']['emailerror'])) {
+          //     echo "<p> echo 'test' </p>";
+          //   }
+
        ?>
     </div>
 

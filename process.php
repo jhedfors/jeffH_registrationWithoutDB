@@ -1,4 +1,5 @@
 <?php
+// session_destroy();
 
 session_start();
 /*
@@ -12,36 +13,36 @@ If you want to check if the fields have inputs in them, check to see if the leng
 if($_POST['email'] != null) {
 
     if(! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-      $errors[] ="This email is not valid";
+      $errors['email'] ="This email is not valid";
 
 
   } else {
-    $errors[] = "Email should not be empty'";
+    $errors[] = ["Email should not be empty"];
   }
 
   if( $_POST['first_name'] != null) {
   } else {
-    $errors[] = "First name should not be empty'";
+    $errors[] = ['First name should not be empty'];
   }
 
   if( $_POST['last_name'] != null) {
   } else {
-    $errors[] = "Last name should not be empty'";
+    $errors[] = ["Last name should not be empty"];
   }
 
   if($_POST['password'] != null) {
   } else {
-    $errors[] = "Password should not be empty'";
+    $errors[] = ["Password should not be empty"];
   }
 
   if($_POST['confirmpassword'] != null) {
   } else {
-    $errors[] = "Confirmation password should not be empty'";
+    $errors[] = ["Confirmation password should not be empty"];
   }
 
   if($_POST['birthdate'] != null) {
   } else {
-    $errors[] = "Birthday should not be empty'";
+    $errors[] = ["Birthday should not be empty"];
   }
 
   // If you want to check for a file - you can use $_FILE
