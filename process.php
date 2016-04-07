@@ -8,9 +8,13 @@ If you want to check if the fields have inputs in them, check to see if the leng
 
   $errors = array();
 
+
 if($_POST['email'] != null) {
+
     if(! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
       $errors[] ="This email is not valid";
+
+
   } else {
     $errors[] = "Email should not be empty'";
   }
